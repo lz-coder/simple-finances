@@ -6,7 +6,8 @@ const App = document.querySelector("#app");
 
 
 const panel_infos = new PanelInfos();
-const panel = new TopPanel({title: "Finances", infos: panel_infos});
+const panel = new TopPanel({title: "$Finances$", infos: panel_infos});
+panel.textColor("#fff");
 
 const toolbar_button_gain = new ToolbarButton("+", () => {panel_infos.gains += 10; panel.updateInfos();});
 const toolbar_button_losses = new ToolbarButton("-", () => {panel_infos.losses += 10; panel.updateInfos();});
