@@ -18,7 +18,11 @@ html, body {
   justify-content: center;
   align-items: center;
   min-height: 6rem;
-  gap: 10rem;
+  flex-direction: column;
+  background: radial-gradient(#314360, #082656);
+  max-width: 98%;
+  margin: .5em auto 0;
+  border-radius: .5em;
 }
 
 .panel-infos-container .panel-info:nth-child(even) {
@@ -37,6 +41,9 @@ html, body {
   margin: 0 auto;
   justify-content: center;
   gap: 1em;
+  background-color: #000;
+  border-radius: .5em;
+  margin-top: .2em;
 }
 
 .toolbar-button {
@@ -45,4 +52,12 @@ html, body {
   font-size: 1.5em;
   font-weight: bold;
   border-radius: 50%;
+}
+
+@media (min-width: 1024px) {
+  .top-panel {
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 680px;
+  }
 }
