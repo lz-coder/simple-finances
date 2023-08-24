@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+}
+
+#app, .content-container {
+  height: 100%;
+}
+
+.flex { display: flex; }
+
+.top-panel {
+  justify-content: center;
+  align-items: center;
+  min-height: 6rem;
+  gap: 10rem;
+}
+
+.panel-infos-container .panel-info:nth-child(even) {
+  margin: 0 2rem;
+}
+
+.panel-info { font-weight: bold; }
+.info-gains { color: green; }
+.info-losses { color: red; }
+.info-rest { color: blue; }
+
+.info-value { font-style: normal; font-size: 1.2rem; }
+
+.toolbar {
+  max-width: 380px;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 1em;
+}
+
+.toolbar-button {
+  width: 48px;
+  height: 48px;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-radius: 50%;
+}
