@@ -35,6 +35,10 @@ export class TopPanel {
             e.querySelector(".info-value").innerText = this._infos.infos[i];
         });
     }
+
+    textColor(color) {
+        this._panel.style.color = color;
+    }
 }
 
 export class PanelInfos {
