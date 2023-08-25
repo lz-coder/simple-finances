@@ -8,11 +8,19 @@ html, body {
   height: 100vh;
 }
 
+.flex { display: flex; }
+
 #app, .content-container {
   height: 100%;
 }
 
-.flex { display: flex; }
+.content-container {
+  margin-top: 1.5em !important;
+  padding: .5em;
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: rgba(128, 128, 128, .4);
+}
 
 .top-panel {
   justify-content: center;
@@ -25,16 +33,33 @@ html, body {
   border-radius: .5em;
 }
 
+.panel-infos-container {
+  display: flex;
+}
+
 .panel-infos-container .panel-info:nth-child(even) {
   margin: 0 2rem;
 }
 
-.panel-info { font-weight: bold; }
+.panel-info { 
+  font-weight: bold;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .4);
+  padding: .4em;
+  border-radius: .5em;
+  box-shadow: 0 0 1px #000 inset;
+  min-width: 7.5em;
+}
+.panel-info i {
+  font-style: normal;
+}
 .info-gains { color: green; }
 .info-losses { color: red; }
 .info-rest { color: blue; }
-
-.info-value { font-style: normal; font-size: 1.2rem; }
+.info-label { font-size: 1.2em; margin-right: .2em; }
+.info-value { font-size: 1.2rem; }
 
 .toolbar {
   max-width: 380px;
@@ -54,10 +79,50 @@ html, body {
   border-radius: 50%;
 }
 
+.finance-card {
+  border-radius: .5em;
+  height: 8em;
+  padding: .2em;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+
+.card-value {
+  position: absolute;
+  bottom: .2em;
+  left: .2em;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: green;
+}
+
+.finance-dialog {
+  width: 20em;
+  height: 20em;
+  margin: auto;
+  border-radius: .5em;
+  padding: .5em;
+}
+.dialog-title {
+  text-align: center;
+}
+
 @media (min-width: 1024px) {
   .top-panel {
     flex-direction: row;
     justify-content: space-around;
     max-width: 680px;
+  }
+  .finance-dialog {
+    margin-top: 10rem;
+  }
+  .content-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: .5em;
+  }
+  .finance-card {
+    width: 98%;
   }
 }
