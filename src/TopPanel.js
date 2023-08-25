@@ -12,9 +12,9 @@ export class TopPanel {
         const panel_infos_container = document.createElement("div");
         panel_infos_container.className = "panel-infos-container";
         const panel_infos = `
-            <span class="panel-info info-gains">Gains: $<i class="info-value">${this._infos.gains}</i></span>
-            <span class="panel-info info-losses">Losses: $<i class="info-value">${this._infos.losses}</i></span>
-            <span class="panel-info info-rest">Rest: $<i class="info-value">${this._infos.rest}</i></span>
+            <span class="panel-info info-gains"><i class="info-label">++</i>$<i class="info-value">${this._infos.gains}</i></span>
+            <span class="panel-info info-losses"><i class="info-label">--</i>$<i class="info-value">${this._infos.losses}</i></span>
+            <span class="panel-info info-rest"><i class="info-label">TT=</i>$<i class="info-value">${this._infos.rest}</i></span>
         `;
 
         panel_infos_container.innerHTML = panel_infos;
